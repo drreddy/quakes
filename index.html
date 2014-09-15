@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quakes</title>
+  <meta name="description" content="Earth Quakes Data Visualization Using Google maps and USGS earth quake data">
+  <meta name="keywords" content="Gmaps, usgs, earthquake, data visualization, quake, maps">
+  <meta name="author" content="Rajeev Reddy">
+  <link href='http://fonts.googleapis.com/css?family=Dosis:400' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+  <div id="one">
+    <div id="info"> <b>Quake Info</b></div>
+
+    <div id="infobotright"> <b>Showing all Qaukes with magnitude >= 2.5 in past month </b> </div>
+    
+    <div id="anim_controls"><b>Animation Control Panel</b><br/><b> <span id="slow">Slow</span> </b> || <b> <span id="play_pause">Pause</span> </b> || <b> <span id="fast">Fast</span> </b> || <b> <span id="reset">Reset Speed</span> </b> <br/> <b> Speed: <span id="speed_val"></span></b> || <b> Animation State: <span id="state"></span></b> </div>
+
+    <div id="inforight"> <b>Colors</b>:<br/> <div id="slide"><b>Green</b>: Magnitude between 2.5 and 3.5 <br/> <b>Yellow</b>: Magnitude between 3.5 and 4.5 <br/> <b>Red</b>: Magnitude greater then 4.5</div></div>
+
+    <div id="credits"> Developed by: <b><a style="color:white; text-decoration:none" href="http://rajeev-reddy.com" target="none">DRReddy < Rajeev Reddy > </a></b> &nbsp;||&nbsp; Data Source: <b><a style="color:white; text-decoration:none" href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="none">USGS</a></b>  </div>
+
+    <div id="botmid"> <a style="color:white; text-decoration:none; width:100%;" href="#two" id="int_link_one"><b>Go To single point visualization</b></a> </div>
+
+    <div id="map1_canvas"></div>
+  </div>
+  <div id="two">
+
+    <div id="info" class="two" style="left: 21.5%; width: 57%; text-align: center;"> <b>Right Click on any point of the map to see all the Quakes with in a 100 miles radius with magnitude >= 1 in the past day</b></div>
+
+    <div id="infobotright" style="right: 5px; bottom: 4px;"> <b>For example Click in the regions of California or bottom regions of Alaska</b> </div>
+
+    <div id="credits"> Developed by: <b><a style="color:white; text-decoration:none" href="http://drreddy.herokuapp.com" target="none">DRReddy < Rajeev Reddy > </a></b> &nbsp;||&nbsp; Data Source: <b><a style="color:white; text-decoration:none" href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="none">USGS</a></b>  </div>
+
+    <div id="botmid" style="width: 5%; left: 47.5%;"> <a style="color:white; text-decoration:none; width:100%;" href="#one" id="int_link_two"><b>Go Back</b></a> </div>
+
+    <div id="map2_canvas"></div>
+  </div>
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&v=3&libraries=geometry"></script>
+<script type="text/javascript" src="js/main.js"></script>
